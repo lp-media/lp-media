@@ -1,4 +1,4 @@
-# lp-media-root
+# client
 
 ## Project setup
 ```
