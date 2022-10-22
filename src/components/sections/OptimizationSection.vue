@@ -6,6 +6,7 @@
         <div class='optimization-section-sub-header'>
             <span class='blue'>Quality</span> is always better than quantity
         </div>
+        <img class='optimization-graphic' src='../../assets/optimization-graphic.png'/>
         <div class='selection-header-wrapper'>
             <div v-if='this.currentSelection == 0' class='selected-selection' @click='this.currentSelection = 0'>
                 <span class='blue-bottom-border'>Manage</span>
@@ -38,8 +39,8 @@
         </div>
         <div v-else-if='currentSelection == 2' class='optimization-section-body'>
             An effective marketing campaign is one that leverages a <strong>consistent</strong> approach towards
-            optimization and efficiency. We use the industry's leading tools to help us test new approaches, 
-            look at the bigger picture, and find ways to move your revenue goals forward.
+            optimization. We use the industry's leading tools to help us test new approaches - so we can
+            find ways to move your revenue goals forward.
         </div>
     </div>
 </template>
@@ -73,78 +74,97 @@
 
 <style>
 
-    .optimization-section-root {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        margin-top: 15%;
+    /* Mobile */
+    @media screen and (max-width: 640px) {
+        .optimization-section-root {
+            display: none;
+        }
     }
 
-    .optimization-section-header {
-        font-family: 'K2D', sans-serif;
-        font-size: 48px;
-        margin-bottom: 1%;
-    }
+    /* Desktop */
+    @media screen and (min-width: 641px) {
 
-    .optimization-section-sub-header {
-        font-family: 'K2D', sans-serif;
-        font-size: 22px;
-        margin-bottom: 4%;
-    }
+        .optimization-section-root {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            margin-top: 15%;
+        }
 
-    .blue {
-        color: #4c8bf5;
-    }
+        .optimization-section-root-mobile {
+            display: none;
+        }
 
-    .selection-header-wrapper {
-        width: 60%;
-        display: inline-flex;
-        margin: auto;
-        margin-bottom: 3.5%;
-    }
+        .optimization-graphic {
+            width: 70%;
+            margin: auto;
+        }
 
-    .selection {
-        width: 33.33%;
-        text-align: center;
-        margin: auto;
-        font-family: 'K2D', sans-serif;
-        font-size: 32px;
-        cursor: pointer;
-        padding-bottom: 5px;
-    }
+        .optimization-section-header {
+            font-family: 'K2D', sans-serif;
+            font-size: 3.25vw;
+            margin-bottom: 1%;
+        }
 
-    .selected-selection {
-        width: 33.33%;
-        text-align: center;
-        margin: auto;
-        font-family: 'K2D', sans-serif;
-        font-size: 32px;
-        cursor: pointer;
-        padding-bottom: 5px;        
-    }
+        .optimization-section-sub-header {
+            font-family: 'K2D', sans-serif;
+            font-size: 1.5vw;
+            margin-bottom: 4%;
+        }
 
-    .optimization-section-body {
-        text-align: center;
-        font-family: 'K2D', sans-serif;
-        font-size: 22px;
-        width: 57%;
-        margin: auto;
-    }
+        .blue {
+            color: #4c8bf5;
+        }
 
-    .blue-bottom-border {
-        border-bottom: 3px solid #4c8bf5;
-    }
+        .selection-header-wrapper {
+            width: 60%;
+            display: inline-flex;
+            margin: auto;
+            margin-bottom: 3.5%;
+        }
 
-    .image-wrapper {
-        width: 100%;
-        margin: auto;
-    }
+        .selection {
+            width: 33.33%;
+            text-align: center;
+            margin: auto;
+            font-family: 'K2D', sans-serif;
+            font-size: 2.4vw;
+            cursor: pointer;
+            padding-bottom: 5px;
+        }
 
-    .optimization-image-wrapper {
-        margin-top: 5%;
-        max-width: 20%;
-    }
+        .selected-selection {
+            width: 33.33%;
+            text-align: center;
+            margin: auto;
+            font-family: 'K2D', sans-serif;
+            font-size: 2.4vw;
+            cursor: pointer;
+            padding-bottom: 5px;        
+        }
 
+        .optimization-section-body {
+            text-align: center;
+            font-family: 'K2D', sans-serif;
+            font-size: 1.5vw;
+            width: 57%;
+            margin: auto;
+        }
+
+        .blue-bottom-border {
+            border-bottom: 3px solid #4c8bf5;
+        }
+
+        .image-wrapper {
+            width: 100%;
+            margin: auto;
+        }
+
+        .optimization-image-wrapper {
+            margin-top: 5%;
+            max-width: 20%;
+        }
+    }
 
 </style>

@@ -16,24 +16,38 @@
 
 <style>
 
-    .client-form-root {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        margin-top: 3%;
-        margin-bottom: 10%;
+    /* Mobile */
+    @media screen and (max-width: 640px) {
+        .client-form-root {
+            display: none;
+        }
     }
 
-    .client-form-header {
-        font-family: 'K2D', sans-serif;
-        font-size: 22px;
-        width: 56%;
-        margin: auto;
-    }
+    /* Desktop */
+    @media screen and (min-width: 641px) {
+        .client-form-root {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            margin-top: 3%;
+            margin-bottom: 35vh;
+        }
 
-    .form-link {
-        color: #4c8bf5;
+        .client-form-root-mobile {
+            display: none;
+        }
+
+        .client-form-header {
+            font-family: 'K2D', sans-serif;
+            font-size: 1.5vw;
+            width: 56%;
+            margin: auto;
+        }
+
+        .form-link {
+            color: #4c8bf5;
+        }
     }
 
 </style>

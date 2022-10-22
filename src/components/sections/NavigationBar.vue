@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class='nav-bar-right'>
-            <div ><a class='border-link' target='_blank' href='https://forms.gle/SD68Akub5D17iJB99'>Contact Us</a></div>
+            <div class='border-link-wrapper'><a class='border-link' target='_blank' href='https://forms.gle/SD68Akub5D17iJB99'>Contact Us</a></div>
         </div>
     </div>
 </template>
@@ -26,7 +26,7 @@
                 window.scrollTo( { top: 0, behavior: 'smooth' } )
             },
             scrollToFramework() {
-                window.scrollTo( { top: 700, behavior: 'smooth' } )
+                window.scrollTo( { top: 750, behavior: 'smooth' } )
             },
             scrollToAboutUs() {
                 window.scrollTo( { top: 2000, behavior: 'smooth' } )
@@ -38,70 +38,127 @@
 
 <style>
 
-    .nav-bar-root {
-        width: 95%;
-        height: 100%;
-        margin: 35px 35px 35px 35px;
-        display: inline-flex;
+    /* Mobile */
+    @media screen and (max-width: 640px) {
+
+        .nav-bar-root {
+            width: 100%;
+            height: 20%;
+            margin-bottom: 5vh;
+            display: inline-flex;
+            border-bottom: 1px solid #DFDFDF;
+            justify-content: center;
+        }
+
+        .nav-bar-left {
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        .logo-wrapper {
+            display: inline-flex;
+        }
+
+        .logo-image {
+            width: 10vw;
+            padding-bottom: 2vh;
+            padding-top: 1vh;
+        }
+
+        .logo-text {
+            display: none;
+        }
+
+        .link-wrapper {
+            display: none;
+        }
+
+        .nav-bar-right {
+            display: none;
+        }
     }
 
-    .nav-bar-left {
-        width: 80%;
-        display: inline-flex;
-        justify-content: left;
-    }
+    /* Desktop */
+    @media screen and (min-width: 641px) {
 
-    .nav-bar-right {
-        width: 20%;
-        display: inline-flex;
-        justify-content: right;
-    }
+        .nav-bar-root {
+            width: 90%;
+            height: 40%;
+            margin: 5vh 2vw 2vh 2vw;
+            display: inline-flex;
+        }
 
-    .logo-wrapper {
-        height: 100%;
-        display: inline-flex;
-    }
+        .nav-bar-left {
+            width: 80%;
+            display: inline-flex;
+            justify-content: left;
+        }
 
-    .logo-image {
-        max-height: 65px;
-        max-width: 65px;
-    }
+        .nav-bar-right {
+            width: 20%;
+            display: inline-flex;
+            justify-content: right;
+        }
 
-    .logo-text {
-        margin: auto;
-        margin-left: 25px;
-        font-family: 'K2D', sans-serif;
-        font-size: 32px;
-    }
+        .logo-wrapper {
+            height: 100%;
+            display: inline-flex;
+            padding-left: 3%;
+        }
 
-    .link-wrapper {
-        height: 100%;
-        margin-left: 30px;
-        display: inline-flex;
-        justify-content: right;
-        font-family: 'K2D', sans-serif;
-        font-size: 22px;
-    }
+        .logo-image {
+            height: 15vh;
+            width: 5vw;
+            max-height: 50%;
+            max-width: 50%;
+        }
 
-    .link {
-        margin: 15px 35px 0px 35px;
-        font-size: 22px;
-        cursor: pointer;
-    }
+        .logo-text {
+            margin-top: 2%;
+            margin-left: 8%;
+            width: 20vw;
+            font-family: 'K2D', sans-serif;
+            font-size: 2.5vw;
+            cursor: default;
+        }
 
-    .link:hover {
-        border-bottom: 2px solid black;
-    }
+        .link-wrapper {
+            position: relative;
+            left: -5vw;
+            height: 50%;
+            display: inline-flex;
+            justify-content: right;
+            font-family: 'K2D', sans-serif;
+            font-size: 1.5vw;
+        }
 
-    .border-link {
-        margin-top: 15px;
-        font-size: 22px;
-        text-decoration: none;
-        color: #000000;
-    }
+        .link {
+            margin: 2.6vh 3vw 0 3vw;
+            font-size: 1.5vw;
+            cursor: pointer;
+        }
 
-    .border-link:hover {
-        border-bottom: 2px solid black;
+        .link:hover {
+            border-bottom: 2px solid black;
+        }
+
+        .border-link-wrapper {
+            padding-top: 3%;
+            margin-top: 5%;
+        }
+
+        .border-link {
+            font-size: 1.5vw;
+            height: 60%;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .border-link:hover {
+            border-bottom: 2px solid black;
+            padding-bottom: 9%;
+        }
     }
 
 </style>
